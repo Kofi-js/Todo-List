@@ -1,9 +1,9 @@
 const express = require("express");
 const connectDB = require("./db");
 const { json } = require("express");
-const routes = require("./routes/todoRoute");
-const models = require("./models/todoModels");
 const todo = require("./controllers/todoController");
+const models = require("./models/todoModels");
+const routes = require("./routes/todoRoute");
 require("dotenv").config();
 
 connectDB();
