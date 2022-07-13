@@ -1,5 +1,12 @@
 let Todo = require("../models/todoModels");
 
+// Get a Todo item
+exports.fetch = (req, res) => {
+  Todo.find()
+    .then((todoModels) => res.json(todoModels))
+    .catch((err) => res.status(400).json("Error" + err));
+};
+
 // add a todo item to the list
 exports.add = (req, res) => {
   const id = req.body.id;
